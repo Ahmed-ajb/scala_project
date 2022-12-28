@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CaissierForm">
+    <TextField fx:id="productNameField" layoutX="207.0" layoutY="138.0" promptText="Nom du produit" />
+    <TextField fx:id="quantityField" layoutX="207.0" layoutY="213.0" promptText="Quantité" />
+    <TextField fx:id="priceField" layoutX="207.0" layoutY="163.0" promptText="Prix" />
+    <TextField fx:id="orderNumberField" layoutX="207.0" layoutY="188.0" promptText="Numéro de commande" />
+    <Button fx:id="submitButton" layoutX="242.0" layoutY="276.0" onAction="#handleSubmit" text="Envoyer" />
+</AnchorPane>

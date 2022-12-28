@@ -13,6 +13,11 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="sbt: com.google.protobuf:protobuf-java:3.11.4:jar" level="project" />
+    <orderEntry type="library" name="sbt: commons-logging:commons-logging:1.2:jar" level="project" />
+    <orderEntry type="library" name="sbt: mysql:mysql-connector-java:8.0.22:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.apache.pdfbox:fontbox:2.0.21:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.apache.pdfbox:pdfbox:2.0.21:jar" level="project" />
     <orderEntry type="library" name="sbt: org.openjfx:javafx-base:19:jar" level="project" />
     <orderEntry type="library" name="sbt: org.openjfx:javafx-base:19:win:jar" level="project" />
     <orderEntry type="library" name="sbt: org.openjfx:javafx-controls:19:jar" level="project" />
