@@ -12,7 +12,7 @@ import java.util.ResourceBundle
 
 class FistPage extends Initializable {
 
-var stg:Stage=null
+var stg:Stage=_
 
   def start(stage: Stage): Unit = {
     stage.setTitle("managmentSystem")
@@ -64,18 +64,39 @@ var stg:Stage=null
   }
   def versCaissier(): Unit ={
 
-
-
-    // Chargez la deuxième page lorsque le bouton est cliqué
-    val fxmlLoader = new FXMLLoader(getClass.getResource("sample.fxml"))
+    val fxmlLoader = new FXMLLoader(getClass.getResource("login_caisse_or_admin.fxml"))
     val root = fxmlLoader.load[Parent]
     val scene = new Scene(root)
-    val stage = anchorPane.getScene.getWindow.asInstanceOf[Stage]
-    stage.setScene(scene)
+    //stage.setMaximized(true)
 
+    val stage = anchorPane.getScene.getWindow.asInstanceOf[Stage]
+
+    //   stage.setFullScreen(true)
+    //   stage.setFullScreenExitHint("")  //empty string
+    stage.setScene(scene)
+//
+//
+//    val stage = anchorPane.getScene.getWindow.asInstanceOf[Stage]
+//
+//
+// val adminClass=new AdminClass()
+//
+//   adminClass.start(stage)
 
   }
   def versAdmin(): Unit ={
+    // Chargez la deuxième page lorsque le bouton est cliqué
+    val fxmlLoader = new FXMLLoader(getClass.getResource("login_caisse_or_admin.fxml"))
+    val root = fxmlLoader.load[Parent]
+    val scene = new Scene(root)
+    //stage.setMaximized(true)
+
+    val stage = anchorPane.getScene.getWindow.asInstanceOf[Stage]
+
+ //   stage.setFullScreen(true)
+ //   stage.setFullScreenExitHint("")  //empty string
+    stage.setScene(scene)
+
 
   }
 

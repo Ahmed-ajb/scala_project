@@ -1,5 +1,8 @@
 package baseDonne
-import java.sql.{Connection, DriverManager}
+import saission.CaissierSaission
+
+import java.sql.{Connection, DriverManager, ResultSet}
+
 
 object DBConnection {
   private val url = "jdbc:mysql://localhost:3306/scala?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"
@@ -10,15 +13,30 @@ object DBConnection {
     // Créez une connexion à la base de données à l'aide des informations de connexion
     DriverManager.getConnection(url, username, password)
   }
-  def isValidCredentials(username: String, password: String): Boolean = {
+  def isValidCredentialAdmin(username: String, password: String): Boolean = {
     val connection = getConnection
+    var boolean=false
     try {
       val statement = connection.createStatement
       val resultSet = statement.executeQuery(s"SELECT * FROM administrateur WHERE username = '$username' AND password = '$password'")
-      resultSet.next() // Si l'enregistrement existe, le curseur se déplace à l'enregistrement suivant
+    resultSet.next() // Si l'enregistrement existe, le curseur se déplace à l'enregistrement suivant
+
     } finally {
-      connection.close()
+    //  connection.close()
     }
   }
+  def isValidCredentialUser(username: String, password: String): Boolean = {
+    val connection = getConnection
+    var boolean=false
+    try {
+      val statement = connection.createStatement
+      val resultSet = statement.executeQuery(s"SELECT * FROM caissier WHERE username = '$username' AND password = '$password'")
+      resultSet.next() // Si l'enregistrement existe, le curseur se déplace à l'enregistrement suivant
+
+    } finally {
+      //  connection.close()
+    }
+  }
+
 
 }
